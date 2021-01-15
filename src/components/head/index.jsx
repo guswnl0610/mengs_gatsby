@@ -7,7 +7,7 @@ export function Head({ description, lang, meta, keywords, title }) {
   return (
     <StaticQuery
       query={detailsQuery}
-      render={data => {
+      render={(data) => {
         const metaDescription =
           description || data.site.siteMetadata.description
         return (
@@ -49,6 +49,10 @@ export function Head({ description, lang, meta, keywords, title }) {
               {
                 name: `twitter:description`,
                 content: metaDescription,
+              },
+              {
+                name: `google-site-verification`,
+                content: `FTQUjeTcroBl9bAqJ1XNbfoYy3PYcj37sMn9wWBO32Y`,
               },
             ]
               .concat(
