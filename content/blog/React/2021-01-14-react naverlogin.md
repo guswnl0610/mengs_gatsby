@@ -41,7 +41,7 @@ Html 파일의 head 태그 안에 위 코드를 추가해준다.
 
 일단 함수를 작성해주어야 한다.
 
-```react
+```js
 const { naver } = window as any;
 
 function Login(props: any) {
@@ -87,7 +87,7 @@ initializeNaverLogin 함수에서 생성한 로그인 버튼은 id가 naverIdLog
 
 여기서 우리에게 필요한 정보를 뽑아다 쓰면 된다. 위 주소값은 location의 hash에서 뽑아다 쓸 수 있다.
 
-```react
+```js
 import { useLocation } from 'react-router-dom';
 
 ...

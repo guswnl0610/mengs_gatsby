@@ -11,7 +11,7 @@ date: 2021-01-13
 
 이를 위해서 일단 scroll 이벤트를 걸어주어야 했는데, scroll 이벤트의 특성 상 사용자가 스크롤을 아주 조금만 하더라도 이벤트가 트리거 된다.
 
-```react
+```js
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -32,7 +32,7 @@ date: 2021-01-13
 
 ## 그리고 set state
 
-```react
+```js
   const handleScroll = () => {
     console.log('스크롤 이벤트');
     if (window.scrollY > 500) {
@@ -60,7 +60,7 @@ date: 2021-01-13
 
 ## 조건을 추가한 set state
 
-```react
+```js
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -100,7 +100,7 @@ throttle이란 어떤 시간을 정해두고,
 
 그렇게 최종 완성된 코드
 
-```react
+```js
 import { throttle } from 'lodash';
 
   const throttledScroll = useMemo(
