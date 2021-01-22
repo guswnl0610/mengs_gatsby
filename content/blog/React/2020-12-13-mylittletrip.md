@@ -28,7 +28,7 @@ date: 2020-12-13
 
 시간은 우리를 기다려 주지 않기에... 눈물을 머금고 쳐낼 것은 쳐내야 했다.
 
-그렇게 채택된 것은 바로 항공권이었다!
+그렇게 채택된 것은 바로 항공권 예약 페이지~ 
 
 ### 프로젝트 진행 기간
 
@@ -44,9 +44,19 @@ date: 2020-12-13
 
 ## 프로젝트 결과물
 
-저번 프로젝트는 class component와 sass를 사용했다면,
+저번 프로젝트와 가장 달라진 점을 꼽아보자면 
 
-이번 프로젝트는 functional component와 styled-components, 그리고 redux를 사용해서 구현해 보았다.
+저번 프로젝트에선 class component와 sass를 사용했지만
+
+이번 프로젝트는 hook을 사용한 functional component와 styled-components, 
+
+그리고 redux를 사용해서 구현해 보았다.
+
+styled components를 사용하며 css in js의 멋짐과, 
+
+redux를 사용하며 전역 state 관리의 편안함, 
+
+hook을 사용하며 조금 더 간편한 컴포넌트 작성과 자주 사용되는 로직 분리의 편안함을 알아볼 수 있었다!
 
 ### 메인 페이지
 
@@ -66,7 +76,7 @@ date: 2020-12-13
 
 자동으로 넘어가는 carousel에서 현재 페이지만 다른 색으로 보여주는 custom dot을 만들었다.
 
-```react
+```js
 const [currentPage, setCurrentPage] = useState(1);
 ...
 const sliderSettings = {
@@ -105,13 +115,13 @@ return (
 
 styled-components를 익히고 나니 완전 쉽게 해결되었다. 이것이...스타일드 컴포넌트의 매력..?
 
-```react
+```jsx
 <Navbar themeColor="normal" />
 ```
 
 우선 Navbar 컴포넌트에 themeColor라는 prop을 넘겨주었고
 
-```react
+```js
 const LogoImage = styled.img.attrs((props) => ({
   alt: "my little trip logo",
   src: props.themeColor === "normal" ? "/images/logo.png" : "/images/logo_white.png",
@@ -166,19 +176,23 @@ Css 커스터마이징도 어렵지 않게 해낼 수 있었다.
 
 이번에 한번 해봤으니 다음에는 더 쉽게 해낼 수 있을 것 같다.
 
-다음에는 다른 플랫폼으로도 시도해보는걸로...
+다음에는 다른 플랫폼으로도 시도해보는걸로...!!
 
 ### 로딩 화면
 
 ![](https://i.ibb.co/ySGbwVf/loading.gif)
 
-메인 페이지에서 리스트 페이지로 넘어갈 때 무조건 5초간 이 페이지가 보이도록 했다.
+메인 페이지에서 항공권 옵션을 선택한 후 리스트 페이지로 넘어갈 때  로딩 화면이 뜨게 되는데
+
+항공권 데이터를 받아올 때 까지만 이 로딩 화면을 보이게 하자니, 너무 짧게 반짝 하고 사라져서
+
+UX적인 관점을 생각하여 무조건 5초간 이 페이지가 보이도록 했다.
 
 5초가 조금 긴 감도 있지만... 너무 예뻐서 자랑하고 싶은 마음에...(?)
 
 그리고 깨알같이 메인 페이지에서 선택했던 옵션이 로딩스크린에도 나타난다.
 
-```react
+```js
     const searchInfo = {
       id: Date.now(),
       depPlace,
@@ -214,7 +228,9 @@ List 페이지에서는 location.state로 searchInfo에 접근하게 해 주었�
 
 (사실 구글신 지분률 70%지만... 쉿...)
 
-clickOutside hook은 주로 모달창 컴포넌트에서, useAxios는 http 통신하는 거의 모든 컴포넌트에서 사용했던 것 같다.
+clickOutside hook은 주로 모달창 컴포넌트에서, 
+
+useAxios는 정말 간단한 http 통신을 하는 컴포넌트들에서 주로 사용했다.
 
 이래서 사람들이 함수형 컴포넌트 사용하는구나를 새삼 느꼈고,,
 
