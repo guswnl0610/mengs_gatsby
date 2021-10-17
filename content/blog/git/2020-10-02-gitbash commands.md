@@ -76,6 +76,9 @@ git pull
 git checkout 브랜치이름
 //브랜치 선택
 
+git checkout -b 브랜치이름
+//브랜치 생성하면서 생성한 브랜치로 전환
+
 git branch 브랜치이름
 //브랜치 생성
 
