@@ -1,6 +1,6 @@
 module.exports = {
   title: `Mengs blog`,
-  description: `개발새발이 되지 않으려 노력하는 블로그`,
+  description: ``,
   author: `Mengkki`,
   introduction: `common fangirl`,
   siteUrl: `https://mengkki.netlify.app`, // Your blog site url
@@ -11,11 +11,11 @@ module.exports = {
     facebook: ``, // Your Facebook account
     linkedin: ``, // Your LinkedIn account
   },
-  icon: `content/assets/felog.png`, // Add your favicon
+  icon: `content/assets/hey.png`, // Add your favicon
   keywords: [`blog`],
   comment: {
-    disqusShortName: 'mengkki', // Your disqus-short-name. check disqus.com.
-    utterances: '', // Your repository for archive comment
+    disqusShortName: '', // Your disqus-short-name. check disqus.com.
+    utterances: 'https://github.com/guswnl0610/mengs_gatsby', // Your repository for archive comment
   },
   configs: {
     countOfInitialPost: 10, // Config your initial count of post
